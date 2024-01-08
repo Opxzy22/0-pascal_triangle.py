@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Defines the pascal_triangle function
+    Defines the pascal_triangle function.
 """
 
 
