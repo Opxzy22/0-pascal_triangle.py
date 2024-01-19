@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
-def minOPerations(n):
-    #!/usr/bin/python3
 """
 Defines a function minOperations
 """
