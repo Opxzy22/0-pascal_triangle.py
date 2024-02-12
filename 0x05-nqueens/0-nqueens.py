@@ -101,3 +101,4 @@ if __name__ == "__main__":
     queens = NQueens(n)
     for result in queens.result():
         print(result)
+        
