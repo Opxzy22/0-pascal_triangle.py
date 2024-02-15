@@ -109,3 +109,4 @@ while idx < n:
         idx = n_queens_pos[0][1] + 1
     else:
         idx += 1
+
