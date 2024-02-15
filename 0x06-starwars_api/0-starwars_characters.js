@@ -1,24 +1,25 @@
-usr/bin/Node
-request = require('request')
+#!/usr/bin/Node
+const request = require('request');
 
 function fetchData(movieId) {
-    url = `https://swapi-api.alx-tools.com/api/films/${movieId}`
+    const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
     request(url, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-            const films = JSON.parse(body)
-            const characters = films.characters
+        if (!error && response.statusCode === 200) {
+            const films = JSON.parse(body);
+            const characters = films.characters;
 
             characters.forEach(charactersURL => {
                 request(charactersURL, function(error, response, body) {
-                    if (!error && response.statusCode == 200) {
+                    if (!error && response.statusCode === 200) {
                         const character = JSON.parse(body);
-                        console.log(character.name)
+                        console.log(character.name);
                     }
                 });
             });
         }
     });
-};
-const movieId = process.argv[2]
-fetchData(movieId)
+}
+const movieId = process.argv[2];
+fetchData(movieId);
+
